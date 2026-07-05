@@ -1020,3 +1020,18 @@ html {
         font-size: 17px;
     }
 }
+.founder-image {
+    height: 700px !important;
+    overflow: hidden !important;
+}
+
+.founder-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
