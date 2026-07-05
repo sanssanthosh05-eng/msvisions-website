@@ -743,23 +743,18 @@ html {
     overflow: hidden;
 }
 
-.founder-image::after {
-    content: "";
+.founder-image {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
 
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 50%,
-            #080808 100%
-        ),
-        linear-gradient(
-            0deg,
-            rgba(138, 43, 226, 0.25),
-            transparent 50%
-        );
+.founder-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
 }
 
 .founder-image img {
