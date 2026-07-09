@@ -1454,3 +1454,40 @@ html {
         z-index: 2;
     }
 }
+/* HERO DIRECTOR FINAL POSITION */
+
+.hero-director {
+    right: 0;
+}
+
+.hero-director-info {
+    right: auto;
+    left: 7%;
+    bottom: 7%;
+
+    padding: 0;
+
+    background: transparent;
+    border-left: none;
+    backdrop-filter: none;
+}
+
+.hero-director-info span {
+    color: #a855f7;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.hero-director-info p {
+    margin: 7px 0 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
