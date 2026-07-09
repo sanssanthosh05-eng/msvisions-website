@@ -1539,3 +1539,17 @@ html {
     display: block;
     color: #ffffff;
 }
+/* HERO DIRECTOR TEXT SIZE */
+
+.hero-director-info span {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    letter-spacing: 4px !important;
+}
+
+.hero-director-info p {
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px !important;
+    line-height: 1 !important;
+}
