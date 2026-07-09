@@ -1506,3 +1506,10 @@ html {
     position: relative;
     z-index: 11;
 }
+/* MOVE DIRECTOR TEXT INTO PHOTO */
+
+.hero-director-info {
+    left: auto !important;
+    right: 38% !important;
+    bottom: 7% !important;
+}
