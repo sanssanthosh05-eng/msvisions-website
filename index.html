@@ -189,9 +189,9 @@
 
     </div>
 
-    <a href="https://wa.me/919629950507?text=Hi%20MSVISIONS%2C%20I%20would%20like%20to%20book%20a%20shoot."
-   target="_blank"
-   class="contact-button">
+    <button class="contact-button" onclick="openBookingForm()">
+    BOOK YOUR SHOOT
+</button>
 
     BOOK YOUR SHOOT
 
@@ -274,6 +274,88 @@
     </div>
 
 </section>
+    <div class="booking-modal" id="bookingModal">
+
+    <div class="booking-box">
+
+        <button class="booking-close" type="button" onclick="closeBookingForm()">×</button>
+
+        <p class="booking-label">BOOK WITH MSVISIONS</p>
+        <h2>PLAN YOUR <span>SHOOT.</span></h2>
+
+        <form id="bookingForm">
+
+            <input type="text" id="bookingName" placeholder="YOUR NAME" required>
+
+            <select id="bookingFunction" required>
+                <option value="">SELECT FUNCTION</option>
+                <option value="Wedding">WEDDING</option>
+                <option value="Engagement">ENGAGEMENT</option>
+                <option value="Baby Shoot">BABY SHOOT</option>
+                <option value="Birthday">BIRTHDAY</option>
+                <option value="Corporate Event">CORPORATE EVENT</option>
+                <option value="Other">OTHER</option>
+            </select>
+
+            <input type="date" id="bookingDate" required>
+
+            <input type="time" id="bookingTime" required>
+
+            <button type="submit" class="booking-submit">
+                CONTINUE TO WHATSAPP
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    const bookingModal = document.getElementById("bookingModal");
+    const bookingForm = document.getElementById("bookingForm");
+
+    function openBookingForm() {
+        bookingModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeBookingForm() {
+        bookingModal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    bookingModal.addEventListener("click", function(event) {
+        if (event.target === bookingModal) {
+            closeBookingForm();
+        }
+    });
+
+    bookingForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("bookingName").value;
+        const functionType = document.getElementById("bookingFunction").value;
+        const date = document.getElementById("bookingDate").value;
+        const time = document.getElementById("bookingTime").value;
+
+        const message =
+`Hi MSVISIONS,
+
+Name: ${name}
+Function: ${functionType}
+Date: ${date}
+Time: ${time}
+
+I would like to book a shoot.`;
+
+        const whatsappURL =
+            "https://wa.me/919629950507?text=" +
+            encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank");
+    });
+</script>
 </body>
 
 </html>
