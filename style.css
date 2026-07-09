@@ -1491,3 +1491,18 @@ html {
 
     letter-spacing: 2px;
 }
+/* FIX HERO DIRECTOR TEXT INSIDE PHOTO */
+
+.hero-director-info {
+    left: 8% !important;
+    right: auto !important;
+    bottom: 8% !important;
+    z-index: 10;
+    width: auto;
+}
+
+.hero-director-info span,
+.hero-director-info p {
+    position: relative;
+    z-index: 11;
+}
