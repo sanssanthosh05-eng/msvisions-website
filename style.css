@@ -1513,3 +1513,29 @@ html {
     right: 38% !important;
     bottom: 7% !important;
 }
+/* FINAL DIRECTOR TEXT FIX */
+
+.hero-director {
+    position: absolute;
+}
+
+.hero-director-info {
+    position: absolute !important;
+    left: 18% !important;
+    right: auto !important;
+    bottom: 6% !important;
+    z-index: 20 !important;
+
+    transform: none !important;
+    margin: 0 !important;
+}
+
+.hero-director-info span {
+    display: block;
+    color: #a855f7;
+}
+
+.hero-director-info p {
+    display: block;
+    color: #ffffff;
+}
