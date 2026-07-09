@@ -1364,3 +1364,93 @@ html {
         font-size: 12px;
     }
 }
+/* HERO CREATIVE DIRECTOR */
+
+.hero-director {
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+
+    width: 42%;
+    height: 88%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.hero-director img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    display: block;
+
+    filter: drop-shadow(
+        0 25px 45px rgba(108, 20, 190, 0.22)
+    );
+}
+
+.hero-director-info {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+
+    padding: 18px 24px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-left: 4px solid #7416b8;
+
+    backdrop-filter: blur(12px);
+}
+
+.hero-director-info span {
+    display: block;
+
+    color: #7416b8;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.hero-director-info p {
+    margin: 7px 0 0;
+
+    color: #111111;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+
+    .hero-director {
+        right: -8%;
+        bottom: 0;
+
+        width: 65%;
+        height: 58%;
+
+        opacity: 0.28;
+
+        pointer-events: none;
+    }
+
+    .hero-director-info {
+        display: none;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+}
