@@ -326,35 +326,99 @@
 
         <form id="bookingForm">
 
-            <input type="text" id="bookingName" placeholder="YOUR NAME" required>
+    <div class="booking-step active" id="bookingStep1">
 
-            <select id="bookingFunction" required>
-                <option value="">SELECT FUNCTION</option>
-                <option value="Wedding">WEDDING</option>
-                <option value="Engagement">ENGAGEMENT</option>
-                <option value="Baby Shoot">BABY SHOOT</option>
-                <option value="Birthday">BIRTHDAY</option>
-                <option value="Corporate Event">CORPORATE EVENT</option>
-                <option value="Other">OTHER</option>
-            </select>
+        <input type="text" id="bookingName" placeholder="YOUR NAME" required>
 
-            <input type="date" id="bookingDate" required>
+        <select id="bookingFunction" required>
+            <option value="">SELECT FUNCTION</option>
+            <option value="Wedding">WEDDING</option>
+            <option value="Engagement">ENGAGEMENT</option>
+            <option value="Baby Shoot">BABY SHOOT</option>
+            <option value="Birthday">BIRTHDAY</option>
+            <option value="Corporate Event">CORPORATE EVENT</option>
+            <option value="Other">OTHER</option>
+        </select>
 
-            <input type="time" id="bookingTime" required>
-<select id="bookingBudget" required>
-    <option value="">SELECT YOUR BUDGET</option>
-    <option value="Below ₹10,000">BELOW ₹10,000</option>
-    <option value="₹10,000 - ₹20,000">₹10,000 - ₹20,000</option>
-    <option value="₹20,000 - ₹40,000">₹20,000 - ₹40,000</option>
-    <option value="₹40,000 - ₹75,000">₹40,000 - ₹75,000</option>
-    <option value="₹75,000+">₹75,000+</option>
-    <option value="Not sure yet">NOT SURE YET</option>
-</select>
-            <button type="submit" class="booking-submit">
-                CONTINUE TO WHATSAPP
-            </button>
+        <input type="date" id="bookingDate" required>
 
-        </form>
+        <input type="time" id="bookingTime" required>
+
+        <select id="bookingBudget" required>
+            <option value="">SELECT YOUR BUDGET</option>
+            <option value="Below ₹10,000">BELOW ₹10,000</option>
+            <option value="₹10,000 - ₹20,000">₹10,000 - ₹20,000</option>
+            <option value="₹20,000 - ₹40,000">₹20,000 - ₹40,000</option>
+            <option value="₹40,000 - ₹75,000">₹40,000 - ₹75,000</option>
+            <option value="₹75,000+">₹75,000+</option>
+            <option value="Not sure yet">NOT SURE YET</option>
+        </select>
+
+        <button type="button" class="booking-submit" onclick="showBookingStep2()">
+            NEXT — SELECT REQUIREMENTS
+        </button>
+
+    </div>
+
+    <div class="booking-step" id="bookingStep2">
+
+        <p class="booking-label">SELECT YOUR REQUIREMENTS</p>
+
+        <div class="requirement-grid">
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Photography">
+                <span>PHOTOGRAPHY</span>
+            </label>
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Videography">
+                <span>VIDEOGRAPHY</span>
+            </label>
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Candid Photography">
+                <span>CANDID PHOTOGRAPHY</span>
+            </label>
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Traditional Photography">
+                <span>TRADITIONAL PHOTOGRAPHY</span>
+            </label>
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Traditional Videography">
+                <span>TRADITIONAL VIDEOGRAPHY</span>
+            </label>
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Drone">
+                <span>DRONE</span>
+            </label>
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Cinematic Video">
+                <span>CINEMATIC VIDEO</span>
+            </label>
+
+            <label class="requirement-card">
+                <input type="checkbox" name="bookingRequirement" value="Reels / Teaser">
+                <span>REELS / TEASER</span>
+            </label>
+
+        </div>
+
+        <button type="button" class="booking-back" onclick="showBookingStep1()">
+            ← BACK
+        </button>
+
+        <button type="submit" class="booking-submit">
+            CONTINUE TO WHATSAPP
+        </button>
+
+    </div>
+
+</form>
 
     </div>
 
