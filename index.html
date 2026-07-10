@@ -440,7 +440,26 @@ bookingDateInput.min = `${year}-${month}-${day}`;
         bookingModal.classList.add("active");
         document.body.style.overflow = "hidden";
     }
+function showBookingStep2() {
+    const name = document.getElementById("bookingName");
+    const functionType = document.getElementById("bookingFunction");
+    const date = document.getElementById("bookingDate");
+    const time = document.getElementById("bookingTime");
+    const budget = document.getElementById("bookingBudget");
 
+    if (!name.value || !functionType.value || !date.value || !time.value || !budget.value) {
+        alert("PLEASE COMPLETE ALL BOOKING DETAILS");
+        return;
+    }
+
+    document.getElementById("bookingStep1").classList.remove("active");
+    document.getElementById("bookingStep2").classList.add("active");
+}
+
+function showBookingStep1() {
+    document.getElementById("bookingStep2").classList.remove("active");
+    document.getElementById("bookingStep1").classList.add("active");
+}
     function closeBookingForm() {
         bookingModal.classList.remove("active");
         document.body.style.overflow = "";
