@@ -1901,3 +1901,7 @@ html {
         top: 5%;
     }
 }
+.requirement-card span,
+#bookingStep2 .booking-label {
+    color: #ffffff !important;
+}
