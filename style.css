@@ -1905,3 +1905,8 @@ html {
 #bookingStep2 .booking-label {
     color: #ffffff !important;
 }
+#bookingStep2 .requirement-card,
+#bookingStep2 .requirement-card span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
