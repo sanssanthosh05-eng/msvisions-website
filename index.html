@@ -438,6 +438,8 @@ bookingDateInput.min = `${year}-${month}-${day}`;
 
     function openBookingForm() {
         bookingModal.classList.add("active");
+        document.getElementById("bookingStep2").classList.remove("active");
+document.getElementById("bookingStep1").classList.add("active");
         document.body.style.overflow = "hidden";
     }
 function showBookingStep2() {
