@@ -490,10 +490,12 @@ function showBookingStep1() {
         const date = document.getElementById("bookingDate").value;
         const time = document.getElementById("bookingTime").value;
         const budget = document.getElementById("bookingBudget").value;
-const requirements = [...document.querySelectorAll('input[name="bookingRequirement"]:checked')].map(item => item.value).join(", ");
-
-        const message =
-`Hi MSVISIONS,
+const requirements = Array.from(document.querySelectorAll('input[name="bookingRequirement"]:checked'))
+    .map(item => item.value)
+    .join(", ");
+alert("Budget: " + budget.value + "\nRequirements: " + requirements);
+        const message = `
+Hi MSVISIONS,
 
 Name: ${name}
 Function: ${functionType}
@@ -505,6 +507,7 @@ Requirements: ${requirements}
 I would like to book a shoot.
 
 Please contact me regarding availability and quotation.
+`;
 
         const whatsappURL =
             "https://wa.me/919629950507?text=" +
