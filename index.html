@@ -489,6 +489,8 @@ function showBookingStep1() {
         const functionType = document.getElementById("bookingFunction").value;
         const date = document.getElementById("bookingDate").value;
         const time = document.getElementById("bookingTime").value;
+        const budget = document.getElementById("bookingBudget").value;
+const requirements = [...document.querySelectorAll('input[name="bookingRequirement"]:checked')].map(item => item.value).join(", ");
 
         const message =
 `Hi MSVISIONS,
@@ -497,8 +499,12 @@ Name: ${name}
 Function: ${functionType}
 Date: ${date}
 Time: ${time}
+Budget: ${budget}
+Requirements: ${requirements}
 
-I would like to book a shoot.`;
+I would like to book a shoot.
+
+Please contact me regarding availability and quotation.
 
         const whatsappURL =
             "https://wa.me/919629950507?text=" +
