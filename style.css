@@ -1060,12 +1060,11 @@ html {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 35px;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
 }
-
 .team-card {
     position: relative;
     overflow: hidden;
@@ -1084,13 +1083,12 @@ html {
     object-fit: cover;
     object-position: center;
     display: block;
-    filter: grayscale(100%);
-    transition: 0.7s ease;
 }
-
-.team-card:hover .team-image img {
-    filter: grayscale(0%);
-    transform: scale(1.04);
+.team-card {
+    position: relative;
+    overflow: hidden;
+    background: #111111;
+    border-radius: 18px;
 }
 
 .team-info {
@@ -1134,9 +1132,11 @@ html {
         grid-template-columns: 1fr;
     }
 
-    .team-image {
-        height: 520px;
-    }
+   .team-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
 
     .team-title {
         letter-spacing: -2px;
