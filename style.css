@@ -1960,3 +1960,44 @@ html {
         padding: 0 5%;
     }
 }
+.team-track{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+}
+
+.team-track::-webkit-scrollbar{
+    display:none;
+}
+
+.team-track .team-card{
+    flex:0 0 320px;
+}
+.team-grid{
+    position:relative;
+}
+
+.team-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#6f2cff;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.team-prev{
+    left:-25px;
+}
+
+.team-next{
+    right:-25px;
+}
