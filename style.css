@@ -1793,9 +1793,9 @@ html {
     }
 
     .team-card {
-        flex: 0 0 82%;
-        height: 560px;
-    }
+    width: 100%;
+    height: 560px;
+}
 
     .team-grid {
     display: grid;
