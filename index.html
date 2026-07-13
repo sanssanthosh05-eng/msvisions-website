@@ -466,6 +466,10 @@
 <script>
     const bookingDateInput = document.getElementById("bookingDate");
 
+if (bookingDateInput) {
+    bookingDateInput.min = `${year}-${month}-${day}`;
+}
+
 const today = new Date();
 const year = today.getFullYear();
 const month = String(today.getMonth() + 1).padStart(2, "0");
@@ -523,7 +527,6 @@ function showBookingStep1() {
 const requirements = Array.from(document.querySelectorAll('input[name="bookingRequirement"]:checked'))
     .map(item => item.value)
     .join(", ");
-alert("Budget: " + budget.value + "\nRequirements: " + requirements);
         const message = `
 Hi MSVISIONS,
 
@@ -545,95 +548,6 @@ Please contact me regarding availability and quotation.
 
         window.open(whatsappURL, "_blank");
     });
-</script>
-    <script>
-const teamTrack = document.querySelector(".team-track");
-const teamCards = document.querySelectorAll(".team-card");
-const teamPrev = document.querySelector(".team-prev");
-const teamNext = document.querySelector(".team-next");
-const teamDots = document.querySelectorAll(".team-dot");
-
-let teamIndex = 0;
-let teamAutoSlide;
-
-function getTeamStep() {
-    const card = teamCards[0];
-    const trackStyle = window.getComputedStyle(teamTrack);
-    const gap = parseFloat(trackStyle.gap) || 0;
-
-    return card.offsetWidth + gap;
-}
-
-function updateTeamCarousel() {
-    teamTrack.scrollTo({
-        left: teamIndex * getTeamStep(),
-        behavior: "smooth"
-    });
-
-    teamDots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === teamIndex);
-    });
-}
-
-function nextTeamSlide() {
-    teamIndex++;
-
-    if (teamIndex >= teamCards.length) {
-        teamIndex = 0;
-    }
-
-    updateTeamCarousel();
-}
-
-function prevTeamSlide() {
-    teamIndex--;
-
-    if (teamIndex < 0) {
-        teamIndex = teamCards.length - 1;
-    }
-
-    updateTeamCarousel();
-}
-
-function startTeamAutoSlide() {
-    clearInterval(teamAutoSlide);
-    teamAutoSlide = setInterval(nextTeamSlide, 5000);
-}
-
-teamNext.addEventListener("click", () => {
-    nextTeamSlide();
-    startTeamAutoSlide();
-});
-
-teamPrev.addEventListener("click", () => {
-    prevTeamSlide();
-    startTeamAutoSlide();
-});
-
-teamDots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        teamIndex = index;
-        updateTeamCarousel();
-        startTeamAutoSlide();
-    });
-});
-
-teamTrack.addEventListener("scroll", () => {
-    clearTimeout(teamTrack.scrollTimer);
-
-    teamTrack.scrollTimer = setTimeout(() => {
-        teamIndex = Math.round(teamTrack.scrollLeft / getTeamStep());
-        teamIndex = Math.max(0, Math.min(teamIndex, teamCards.length - 1));
-
-        teamDots.forEach((dot, index) => {
-            dot.classList.toggle("active", index === teamIndex);
-        });
-    }, 100);
-});
-
-window.addEventListener("resize", updateTeamCarousel);
-
-startTeamAutoSlide();
 </script>
 </body>
 
