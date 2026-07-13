@@ -1797,11 +1797,12 @@ html {
         height: 560px;
     }
 
-    .team-track {
-        gap: 18px;
-        padding-left: 9%;
-        padding-right: 9%;
-    }
+    .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 9%;
+}
 
     .team-arrow {
         display: none;
@@ -1951,4 +1952,19 @@ html {
 
 .booking-step.active {
     display: block !important;
+}
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 0 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 5%;
+    }
 }
