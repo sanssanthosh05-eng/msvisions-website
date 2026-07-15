@@ -2040,3 +2040,20 @@ transform:translateY(0px);
 }
 
 }
+.about-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:520px;
+    animation:floatGear 5s ease-in-out infinite;
+}
+
+@keyframes floatGear{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
