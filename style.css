@@ -2001,3 +2001,81 @@ html {
 .team-next{
     right:-25px;
 }
+.team-grid{
+    position:relative;
+    display:block;
+    max-width:1400px;
+    margin:auto;
+}
+
+.team-track{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    padding:20px 5px 40px;
+}
+
+.team-track::-webkit-scrollbar{
+    display:none;
+}
+
+.team-track .team-card{
+    flex:0 0 calc((100% - 60px) / 3);
+}
+
+.team-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#8a2be2;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    z-index:20;
+}
+
+.team-prev{
+    left:-30px;
+}
+
+.team-next{
+    right:-30px;
+}
+
+.team-dots{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:25px;
+}
+
+.team-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#555;
+    cursor:pointer;
+}
+
+.team-dot.active{
+    background:#8a2be2;
+}
+
+@media(max-width:768px){
+
+.team-track .team-card{
+    flex:0 0 100%;
+}
+
+.team-prev,
+.team-next{
+    display:none;
+}
+
+}
