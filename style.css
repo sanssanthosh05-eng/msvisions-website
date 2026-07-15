@@ -1987,42 +1987,40 @@ grid-template-columns:1fr;
 
 }
 
-/* Drone */
+.about-image{
+    position:relative;
+    width:100%;
+    min-height:550px;
+}
 
 .about-drone{
     position:absolute;
-    width:180px;
+    width:220px;
     top:20px;
-    left:-40px;
-    z-index:10;
+    left:40px;
     animation:droneFloat 4s ease-in-out infinite;
 }
 
-/* Camera + Gimbal */
-
 .about-gimbal{
     position:absolute;
-    width:260px;
-    right:-60px;
-    top:170px;
-    z-index:11;
+    width:420px;
+    right:0;
+    top:140px;
     animation:gimbalFloat 5s ease-in-out infinite;
 }
-
-/* Floating Animation */
 
 @keyframes droneFloat{
 
 0%{
-transform:translateY(0px) rotate(0deg);
+transform:translateY(0px);
 }
 
 50%{
-transform:translateY(-12px) rotate(2deg);
+transform:translateY(-15px);
 }
 
 100%{
-transform:translateY(0px) rotate(0deg);
+transform:translateY(0px);
 }
 
 }
@@ -2034,7 +2032,7 @@ transform:translateY(0px);
 }
 
 50%{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 100%{
