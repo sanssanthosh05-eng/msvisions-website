@@ -151,3 +151,103 @@ body{
 }
 
 }
+/* ===============================
+   FEATURED PROJECTS
+================================= */
+
+.portfolio-filter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    margin:60px 0;
+}
+
+.portfolio-filter button{
+    padding:14px 30px;
+    border:1px solid #8b5cf6;
+    border-radius:40px;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+    font-size:15px;
+    transition:.35s ease;
+}
+
+.portfolio-filter button.active,
+.portfolio-filter button:hover{
+    background:#8b5cf6;
+    box-shadow:0 0 30px rgba(139,92,246,.45);
+}
+
+.portfolio-grid{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    padding-bottom:100px;
+}
+
+.portfolio-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    cursor:pointer;
+    background:#111;
+    height:420px;
+}
+
+.portfolio-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+
+.portfolio-card:hover img{
+    transform:scale(1.12);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:30px;
+    opacity:0;
+    transition:.35s;
+}
+
+.portfolio-card:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.overlay span{
+    color:#d7d7d7;
+    font-size:16px;
+}
+
+.portfolio-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border:2px solid transparent;
+    border-radius:24px;
+    transition:.35s;
+}
+
+.portfolio-card:hover::after{
+    border-color:#8b5cf6;
+}
