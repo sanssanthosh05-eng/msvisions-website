@@ -2057,3 +2057,67 @@ transform:translateY(0px);
     50%{transform:translateY(-12px);}
     100%{transform:translateY(0);}
 }
+/* ===========================
+   PORTFOLIO PAGE
+=========================== */
+
+.portfolio-hero{
+    padding:120px 10%;
+    text-align:center;
+    background:linear-gradient(180deg,#050505,#111);
+}
+
+.portfolio-hero h5{
+    color:#9b5cff;
+    letter-spacing:3px;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.portfolio-hero h1{
+    font-size:60px;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.portfolio-hero p{
+    max-width:700px;
+    margin:auto;
+    color:#bdbdbd;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.portfolio-categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:80px 10%;
+    background:#0b0b0b;
+}
+
+.portfolio-card{
+    background:#141414;
+    border:1px solid rgba(155,92,255,.25);
+    border-radius:20px;
+    padding:45px 30px;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.portfolio-card:hover{
+    transform:translateY(-10px);
+    border-color:#9b5cff;
+    box-shadow:0 15px 40px rgba(155,92,255,.25);
+}
+
+.portfolio-card h2{
+    color:#fff;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.portfolio-card p{
+    color:#bdbdbd;
+    line-height:1.7;
+}
