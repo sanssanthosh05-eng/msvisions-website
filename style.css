@@ -2156,3 +2156,12 @@ transform:translateY(0px);
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:25px;
 }
+.service-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.service-link:hover .service-card{
+    transform:translateY(-10px);
+}
