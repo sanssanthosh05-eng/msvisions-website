@@ -294,3 +294,54 @@ body{
 .gallery-item:hover img{
     transform:scale(1.08);
 }
+/* Lightbox */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:12px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:#fff;
+    font-size:40px;
+    cursor:pointer;
+}
+
+.prev-btn,
+.next-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+    padding:20px;
+}
+
+.prev-btn{
+    left:20px;
+}
+
+.next-btn{
+    right:20px;
+}
