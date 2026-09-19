@@ -382,3 +382,8 @@ body{
         rgba(0, 0, 0, 0.9)
     );
 }
+.portfolio-card.prewedding {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 2 / 3 !important;
+}
